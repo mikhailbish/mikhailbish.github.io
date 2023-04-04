@@ -1,1 +1,0 @@
-import{a as t,o as n,b as o,e as s,h as _}from"./entry.56bc298f.js";const a={},c={class:"sml-circle-round-btn",type:"button"};function r(e,l,d,u,p,i){return n(),o("button",c,[s("span",null,[_(e.$slots,"default",{},void 0,!0)])])}const f=t(a,[["render",r],["__scopeId","data-v-ee95bb80"]]);export{f as default};
