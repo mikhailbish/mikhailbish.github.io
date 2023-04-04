@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><meta charset="utf-8">
+<title>StreetBarbell</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:site_name" content="StreetBarbell">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="/img/icon/StreetBarbellLogo.svg">
+<link rel="apple-touch-icon" type="image/png" href="/img/icon/StreetBarbellLogo.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="robots" href="/robots.txt">
+<noscript>This website requires javascript to run. Please enable it in browser settings.</noscript>
+<style type="text/css" id="vuetify-theme-stylesheet">.v-theme--light {
+      color-scheme: normal;
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 98,0,238;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 3,218,198;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 0,0,0;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--dark {
+      color-scheme: dark;
+      --v-theme-background: 18,18,18;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 33,33,33;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 189,189,189;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 66,66,66;
+      --v-theme-primary: 187,134,252;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 1;
+      --v-theme-secondary: 3,218,197;
+      --v-theme-secondary-overlay-multiplier: 2;
+      --v-theme-secondary-darken-1: 3,218,197;
+      --v-theme-secondary-darken-1-overlay-multiplier: 2;
+      --v-theme-error: 207,102,121;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 2;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 2;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 2;
+      --v-theme-on-background: 255,255,255;
+      --v-theme-on-surface: 255,255,255;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 0,0,0;
+      --v-theme-on-secondary-darken-1: 0,0,0;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 255, 255, 255;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.1;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.16;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 52, 52, 52;
+      --v-theme-on-code: 204, 204, 204;
+    }
+    .bg-background {
+      --v-theme-overlay-multiplier: var(--v-theme-background-overlay-multiplier);
+      background: rgb(var(--v-theme-background)) !important;
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .bg-surface {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-overlay-multiplier);
+      background: rgb(var(--v-theme-surface)) !important;
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .bg-surface-variant {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-variant-overlay-multiplier);
+      background: rgb(var(--v-theme-surface-variant)) !important;
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .bg-primary {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-overlay-multiplier);
+      background: rgb(var(--v-theme-primary)) !important;
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .bg-primary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-darken-1-overlay-multiplier);
+      background: rgb(var(--v-theme-primary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .bg-secondary {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-overlay-multiplier);
+      background: rgb(var(--v-theme-secondary)) !important;
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .bg-secondary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-darken-1-overlay-multiplier);
+      background: rgb(var(--v-theme-secondary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .bg-error {
+      --v-theme-overlay-multiplier: var(--v-theme-error-overlay-multiplier);
+      background: rgb(var(--v-theme-error)) !important;
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .bg-info {
+      --v-theme-overlay-multiplier: var(--v-theme-info-overlay-multiplier);
+      background: rgb(var(--v-theme-info)) !important;
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .bg-success {
+      --v-theme-overlay-multiplier: var(--v-theme-success-overlay-multiplier);
+      background: rgb(var(--v-theme-success)) !important;
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .bg-warning {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-overlay-multiplier);
+      background: rgb(var(--v-theme-warning)) !important;
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+    .text-background {
+      color: rgb(var(--v-theme-background)) !important;
+    }
+    .border-background {
+      --v-border-color: var(--v-theme-background);
+    }
+    .text-surface {
+      color: rgb(var(--v-theme-surface)) !important;
+    }
+    .border-surface {
+      --v-border-color: var(--v-theme-surface);
+    }
+    .text-surface-variant {
+      color: rgb(var(--v-theme-surface-variant)) !important;
+    }
+    .border-surface-variant {
+      --v-border-color: var(--v-theme-surface-variant);
+    }
+    .on-surface-variant {
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .text-primary {
+      color: rgb(var(--v-theme-primary)) !important;
+    }
+    .border-primary {
+      --v-border-color: var(--v-theme-primary);
+    }
+    .text-primary-darken-1 {
+      color: rgb(var(--v-theme-primary-darken-1)) !important;
+    }
+    .border-primary-darken-1 {
+      --v-border-color: var(--v-theme-primary-darken-1);
+    }
+    .text-secondary {
+      color: rgb(var(--v-theme-secondary)) !important;
+    }
+    .border-secondary {
+      --v-border-color: var(--v-theme-secondary);
+    }
+    .text-secondary-darken-1 {
+      color: rgb(var(--v-theme-secondary-darken-1)) !important;
+    }
+    .border-secondary-darken-1 {
+      --v-border-color: var(--v-theme-secondary-darken-1);
+    }
+    .text-error {
+      color: rgb(var(--v-theme-error)) !important;
+    }
+    .border-error {
+      --v-border-color: var(--v-theme-error);
+    }
+    .text-info {
+      color: rgb(var(--v-theme-info)) !important;
+    }
+    .border-info {
+      --v-border-color: var(--v-theme-info);
+    }
+    .text-success {
+      color: rgb(var(--v-theme-success)) !important;
+    }
+    .border-success {
+      --v-border-color: var(--v-theme-success);
+    }
+    .text-warning {
+      color: rgb(var(--v-theme-warning)) !important;
+    }
+    .border-warning {
+      --v-border-color: var(--v-theme-warning);
+    }
+    .on-background {
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .on-surface {
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .on-primary {
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .on-primary-darken-1 {
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .on-secondary {
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .on-secondary-darken-1 {
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .on-error {
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .on-info {
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .on-success {
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .on-warning {
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+</style><link rel="modulepreload" href="/items/6/_payload.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/entry.56bc298f.js"><link rel="preload" as="style" href="/_nuxt/entry.8dd7cbd7.css"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/default.f5524eef.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/PageTitle.8a8825cc.js"><link rel="preload" as="style" href="/_nuxt/PageTitle.452bcc22.css"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/_id_.faa6e993.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/DetailView.87d9fb5e.js"><link rel="preload" as="style" href="/_nuxt/DetailView.b4113e70.css"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/SmallCircleButton.12aa73d1.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/fetch.ec3d3e64.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/error-component.412be8c7.js"><link rel="stylesheet" href="/_nuxt/entry.8dd7cbd7.css"><link rel="stylesheet" href="/_nuxt/PageTitle.452bcc22.css"><link rel="stylesheet" href="/_nuxt/DetailView.b4113e70.css"><style>.page-holder[data-v-e2229bfa]{align-items:center;display:flex;justify-content:center;width:100%}</style><style>.sml-circle-round-btn[data-v-ee95bb80]{border-radius:50%;border-width:0;display:table-cell;font-size:16px;height:35px;text-align:center;vertical-align:middle;width:35px}.sml-circle-round-btn[data-v-ee95bb80]:hover{box-shadow:0 2px 12px rgba(0,0,0,.08);transition-delay:0s;transition-duration:.25s;transition-property:all;transition-timing-function:ease}</style></head>
+<body ><div id="__nuxt"><!--[--><div data-v-e2229bfa><div class="header-container" data-v-e2229bfa><!----></div><!--[--><!--[--><div><div style="display:flex;height:100%;" data-v-2b9da148><div class="image-holder" data-v-2b9da148><img class="sample-image" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAC0APADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACism58SabaXMlvNI6vGcMdh2g+melIniXTXztkkOBk4jJ/lU8y7j5Wa9FZa+IdNP/LZhjg5Q8fXipBremH/l8jz6HinzLuFm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" alt="" data-v-2b9da148></div><div class="vl" data-v-2b9da148></div><div class="info-holder" data-v-2b9da148><h1 data-v-2b9da148>SCANDINAVIA-TUOLI SELKÄNOJALLA</h1><span data-v-2b9da148>12.22 €</span><p data-v-2b9da148>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet rutrum risus. Integer venenatis risus arcu, sed placerat arcu vehicula eget. Integer venenatis neque efficitur urna rhoncus fermentum. In id suscipit elit. Maecenas ac augue quis eros pretium ultricies. Praesent tincidunt hendrerit erat, ut posuere magna tempor eu. Suspendisse augue tellus, viverra non dictum eget, volutpat a eros. Morbi tristique nisi neque, ut hendrerit sem laoreet et. Nulla at fermentum tortor. Vestibulum malesuada dapibus orci, sit amet gravida arcu efficitur et. Ut interdum mi quis lacinia egestas. Pellentesque id volutpat orci, in maximus risus. Nunc at eros in leo egestas elementum ac at ipsum.</p><div class="action-container" data-v-2b9da148><div class="holder" style="width:30%;" data-v-2b9da148 data-v-8d70e0a4><button class="sml-circle-round-btn counter-btn" type="button" data-v-8d70e0a4 data-v-ee95bb80><span data-v-ee95bb80><!--[--><!----><!--]--></span></button><span class="quantity" data-v-8d70e0a4>0</span><button class="sml-circle-round-btn counter-btn" type="button" data-v-8d70e0a4 data-v-ee95bb80><span data-v-ee95bb80><!--[--><!----><!--]--></span></button></div><button data-v-2b9da148>Add to Cart</button><button data-v-2b9da148>More information</button></div></div></div></div><!--]--><!--]--><div class="footer-container" data-v-e2229bfa><div class="v-container v-container--fluid fill-height" style="padding:0;" data-v-e2229bfa><div class="v-row"><div class="v-col"><p>Location: Ohrahuhdantie 4, Helsinki, Finland</p></div><div class="v-col"><a>Privacy Policy</a><a>Legal</a><a>Terms &amp; Conditions</a></div><div class="v-col"><p> Contacts: info@streetbarbell.com +3580137291313</p></div></div></div></div></div><!--]--></div><script type="module">import p from "/items/6/_payload.js";window.__NUXT__={...p,...({state:{},_errors:{},serverRendered:true,config:{public:{},app:{baseURL:"\u002F",buildAssetsDir:"\u002F_nuxt\u002F",cdnURL:""}},prerenderedAt:1680639754930})}</script><script type="module" src="/_nuxt/entry.56bc298f.js" crossorigin></script><script type="module" src="/_nuxt/default.f5524eef.js" crossorigin></script><script type="module" src="/_nuxt/_id_.faa6e993.js" crossorigin></script><script type="module" src="/_nuxt/SmallCircleButton.12aa73d1.js" crossorigin></script></body>
+</html>
