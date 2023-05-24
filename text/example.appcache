@@ -1,0 +1,22 @@
+CACHE MANIFEST
+# v1.0 : 10-08-2014
+ 
+CACHE:
+# pages
+index.html
+about.html
+contact.html
+
+
+# styles & scripts
+css/main.css
+ 
+# images
+/favicon.ico
+images/logo.png
+ 
+# NETWORK:
+# login.php
+ 
+# FALLBACK:
+# / /offline.html
